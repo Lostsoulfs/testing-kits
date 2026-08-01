@@ -1,7 +1,7 @@
-streamlit>=1.58.0
-pandas>=3.0.3
-GitPython>=3.1.50
+streamlit>=1.60.0
+pandas>=3.0.5
+GitPython>=3.1.56
 h11>=0.16.0
 idna>=3.18
-pillow>=12.2.0
-pyarrow>=24.0.0
+pillow>=12.3.0
+pyarrow>=25.0.0
