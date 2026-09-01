@@ -20,10 +20,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
       - run: python -m pip install --disable-pip-version-check "ruff==0.15.17"
@@ -67,7 +67,7 @@ jobs:
       - name: Generate checksums
         run: sha256sum release-artifacts/* > release-artifacts/SHA256SUMS
       - name: Submit SPDX dependencies
-        uses: advanced-security/spdx-dependency-submission-action@169d22427d74f3faf93504e70b03eede8dab272a # v0.2.0
+        uses: advanced-security/spdx-dependency-submission-action@8b97fad313c1af2c5c490e1f72ab338371eb92f6 # v0.3.2
         with:
           filePath: release-artifacts
       - name: Upload retained build artifacts
